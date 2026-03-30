@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IDEA 2 SYSTEM | Autonomous Multi-Agent Framework</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/styles.css">
+
+</head>
+
+<body>
+
+<!-- Background -->
+<div class="background-canvas"></div>
+<div class="background-grid"></div>
+
+<main class="container">
+
+<header>
+<h1><span class="gradient-text">IDEA 2</span> SYSTEM</h1>
+<p class="subtitle">Collaborative Multi-Agent Autonomous Framework</p>
+</header>
+
+<!-- INPUT -->
+<section class="task-input-section">
+
+<div class="input-card glass-panel">
+
+<textarea id="taskInput"
+placeholder="Describe a complex problem..."></textarea>
+
+<!-- ✅ Example Ideas -->
+<div class="example-ideas">
+    <span>Example Ideas:</span>
+    <button class="example-btn">Food Delivery System</button>
+    <button class="example-btn">AI Fitness App</button>
+    <button class="example-btn">Online Learning Platform</button>
+</div>
+
+<div class="button-group">
+<button id="startBtn" class="primary-btn">GENERATE</button>
+<button id="clearBtn" class="secondary-btn">Reset</button>
+</div>
+
+</div>
+</section>
+
+<!-- ✅ PIPELINE (FIXED POSITION) -->
+<div class="pipeline">
+
+<div class="pipeline-step" id="step-idea">Idea</div>
+<div class="pipeline-line"></div>
+
+<div class="pipeline-step" id="step-planner">Planner</div>
+<div class="pipeline-line"></div>
+
+<div class="pipeline-step" id="step-research">Research</div>
+<div class="pipeline-line"></div>
+
+<div class="pipeline-step" id="step-coder">Coder</div>
+<div class="pipeline-line"></div>
+
+<div class="pipeline-step" id="step-output">Blueprint</div>
+
+</div>
+
+<!-- AGENTS -->
+<div class="agents-container">
+
+<div class="agent-card" id="card-Planner-Agent">
+<div class="agent-header">
+<span class="agent-icon">📝</span>
+<h3>Planner</h3>
+<span id="planner-status">🔵</span>
+</div>
+</div>
+
+<div class="agent-card" id="card-Research-Agent">
+<div class="agent-header">
+<span class="agent-icon">🔍</span>
+<h3>Researcher</h3>
+<span id="research-status">🔵</span>
+</div>
+</div>
+
+<div class="agent-card" id="card-Coder-Agent">
+<div class="agent-header">
+<span class="agent-icon">💻</span>
+<h3>Coder</h3>
+<span id="coder-status">🔵</span>
+</div>
+</div>
+
+</div>
+
+<!-- TERMINAL -->
+<div class="terminal-card">
+
+<div class="terminal-header">
+<div class="traffic-lights">
+<span class="tl red"></span>
+<span class="tl yellow"></span>
+<span class="tl green"></span>
+</div>
+<span class="terminal-title">synapse-stdout ~/.logs</span>
+</div>
+
+<div class="terminal-body" id="consoleOutput">
+<div class="log-entry info">System initialized. Waiting for task...</div>
+</div>
+
+</div>
+
+<!-- RESULTS -->
+<section id="blueprint-result" class="glass-panel hidden">
+
+<div class="status-header">
+
+<h2>Generated Development Blueprint</h2>
+
+<div class="export-buttons">
+<button id="copyBtn" class="secondary-btn">Copy</button>
+<button id="downloadTxt" class="secondary-btn">.txt</button>
+<button id="downloadMd" class="secondary-btn">.md</button>
+</div>
+
+</div>
+
+<div class="blueprint-content">
+
+<div class="blueprint-node" id="planner-result">
+<h3>📝 Planner Output</h3>
+<pre></pre>
+</div>
+
+<div class="blueprint-node" id="research-result">
+<h3>🔍 Research Output</h3>
+<pre></pre>
+</div>
+
+<div class="blueprint-node" id="coder-result">
+<h3>💻 Coder Output</h3>
+<pre></pre>
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<script src="/static/app.js"></script>
+
+</body>
+</html>
